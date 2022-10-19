@@ -1,0 +1,21 @@
+Private Sub CommandButton1_Click()
+
+
+Text = InputBox("enter the text you want to highlight")
+
+Dim myrange As Range
+
+Set myrange = ThisWorkbook.Worksheets("sheet1").UsedRange
+
+
+For Each cell In myrange.Cells
+
+If cell.Value = Text Then
+
+cell.Interior.Color = 255
+End If
+
+Next
+
+
+End Sub
